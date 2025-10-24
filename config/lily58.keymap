@@ -4,13 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <locale/keys_de.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <locale/keys_de.h>
 #include "keys_de.h"
-
 
 / {
     behaviors {
@@ -94,11 +93,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp DE_N1  &kp DE_N2  &kp DE_N3              &kp DE_N4              &kp DE_N5                                     &kp DE_N6  &kp DE_N7    &kp DE_N8     &kp DE_N9   &kp DE_N0    &kp DE_GRAVE
-&kp TAB    &kp DE_Q   &kp DE_W   &kp DE_E               &kp DE_R               &longPress LG(T) DE_T                         &kp DE_Y   &kp DE_U     &kp DE_I      &kp DE_O    &kp DE_P     &kp DE_MINUS
-&kp LCTRL  &kp DE_A   &kp DE_S   &kp DE_D               &kp DE_F               &kp DE_G                                      &kp DE_H   &kp DE_J     &kp DE_K      &kp DE_L    &kp DE_O_UMLAUT  &underscoreDBTap
-&kp LSHFT  &kp DE_Z   &kp DE_X   &longPress LG(C) DE_C  &longPress LG(V) DE_V  &kp DE_B               &kp DE_LBKT     &kp DE_RBKT  &kp DE_N   &kp DE_M     &kp DE_COMMA  &kp DE_DOT  &kp DE_FSLH  &kp RSHFT
-                           &kp LALT            &kp LGUI            &mo 1               &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
+&kp ESC    &kp DE_N1               &kp DE_N2               &kp DE_N3              &kp DE_N4                  &kp DE_N5                                          &kp DE_N6  &kp DE_N7                   &kp DE_N8            &kp DE_N9            &kp DE_N0        &kp DE_GRAVE
+&kp TAB    &kp DE_Q                &kp DE_W                &kp DE_E               &kp DE_R                   &longPress LG(T) DE_T                              &kp DE_Z   &kp DE_U                    &kp DE_I             &kp DE_O             &kp DE_P         &kp DE_MINUS
+&kp LCTRL  &HML LEFT_CONTROL DE_A  &HML LEFT_ALT LS(DE_S)  &HML LGUI DE_D         &HMShiftL LEFT_SHIFT DE_F  &kp DE_G                                           &kp DE_H   &HMShiftR RIGHT_SHIFT DE_J  &HMR RIGHT_GUI DE_K  &HMR RIGHT_ALT DE_L  &kp DE_O_UMLAUT  &underscoreDBTap
+&kp LSHFT  &kp DE_Y                &kp DE_X                &longPress LG(C) DE_C  &longPress LG(V) DE_V      &kp DE_B               &kp DE_LBKT    &kp DE_RBKT  &kp DE_N   &kp DE_M                    &kp DE_COMMA         &kp DE_DOT           &kp DE_FSLH      &kp RSHFT
+                                                           &kp LALT               &kp LGUI                   &mo 1                  &kp SPACE      &kp RET      &mo 2      &kp BSPC                    &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -113,11 +112,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans     &trans    &trans    &trans
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp DE_GRAVE   &kp DE_EXCL          &kp DE_AT             &kp DE_HASH           &kp DE_DOLLAR    &kp DE_PRCNT                       &kp DE_CARET  &kp DE_AMPS   &kp DE_ASTRK  &kp DE_LPAR  &kp DE_RPAR  &kp DE_TILDE
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp DE_MINUS  &kp DE_PLUS   &kp DE_LBRC  &kp DE_RBRC  &kp DE_PIPE
-                                                 &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&bt BT_CLR    &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3   &bt BT_SEL 4                    &trans        &trans        &trans        &trans       &trans       &trans
+&kp F1        &kp F2            &kp F3             &kp F4             &kp F5         &kp F6                          &kp F7        &kp F8        &kp F9        &kp F10      &kp F11      &kp F12
+&kp DE_GRAVE  &kp DE_EXCL       &kp DE_AT          &kp DE_HASH        &kp DE_DOLLAR  &kp DE_PRCNT                    &kp DE_CARET  &kp DE_AMPS   &kp DE_ASTRK  &kp DE_LPAR  &kp DE_RPAR  &kp DE_TILDE
+&trans        &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans         &trans        &trans    &trans  &trans        &kp DE_MINUS  &kp DE_PLUS   &kp DE_LBRC  &kp DE_RBRC  &kp DE_PIPE
+                                                   &trans             &trans         &trans        &trans    &trans  &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -132,11 +131,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp DE_GRAVE  &kp DE_N1  &kp DE_N2  &kp DE_N3   &kp DE_N4   &kp DE_N5                     &kp DE_N6       &kp DE_N7     &kp DE_N8     &kp DE_N9    &kp DE_N0     &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp DE_PLUS  &kp DE_MINUS  &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT   &kp DE_BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans        &trans     &trans     &trans     &trans     &trans                       &trans       &trans        &trans        &trans       &trans       &trans
+&kp DE_GRAVE  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5                    &kp DE_N6    &kp DE_N7     &kp DE_N8     &kp DE_N9    &kp DE_N0    &trans
+&kp F1        &kp F2     &kp F3     &kp F4     &kp F5     &kp F6                       &trans       &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT    &trans
+&kp F7        &kp F8     &kp F9     &kp F10    &kp F11    &kp F12    &trans    &trans  &kp DE_PLUS  &kp DE_MINUS  &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH
+                                    &trans     &trans     &trans     &trans    &trans  &trans       &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
