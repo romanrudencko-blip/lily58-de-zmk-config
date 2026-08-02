@@ -1,27 +1,39 @@
+#manifest:
+#  remotes:
+#    - name: zmkfirmware
+#      url-base: https://github.com/zmkfirmware
+#    - name: zmk-locales
+#      url-base: https://github.com/joelspadin
+    # support nice_oled and nice_epaper
+#    - name: mctechnology17
+#      url-base: https://github.com/mctechnology17
+    # Additional modules containing boards/shields/custom code can be listed here as well
+    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+#  projects:
+#    - name: zmk
+#      remote: zmkfirmware
+#      revision: main
+#      import: app/west.yml
+#    - name: zmk-locales
+#      remote: zmk-locales
+#      revision: main
+    # support nice_oled and nice_epaper
+#    - name: zmk-nice-oled
+#      remote: mctechnology17
+#      revision: main
+#  self:
+#    path: config
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zmk-locales
-      url-base: https://github.com/joelspadin
-    # support nice_oled and nice_epaper
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.2
       import: app/west.yml
-    - name: zmk-locales
-      remote: zmk-locales
-      revision: main
-    # support nice_oled and nice_epaper
-    - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
   self:
     path: config
-
 
