@@ -4,84 +4,15 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <locale/keys_de.h>
+/*#include <locale/keys_de.h>*/
 #include "lily58.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include "keys_de.h"
+/*#include "keys_de.h"*/
 
 / {
-    behaviors {
-        longPress: longPress {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LONGPRESS";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            flavor = "tap-preferred";
-        };
-
-        HMShiftR: HMShiftR {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMSHIFTR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
-        };
-
-        HMShiftL: HMShiftL {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMSHIFTL";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
-        };
-
-        HMR: HMR {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
-            flavor = "tap-preferred";
-        };
-
-        HML: HML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
-            flavor = "tap-preferred";
-        };
-
-        underscoreDBTap: underscoreDBTap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UNDERSCOREDBTAP";
-            #binding-cells = <0>;
-            bindings = <&kp DE_MINUS>, <&kp DE_UNDER>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -93,12 +24,13 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
+            display-name = "Bas";
             bindings = <
-&kp ESC    &kp DE_N1               &kp DE_N2               &kp DE_N3              &kp DE_N4                  &kp DE_N5                                          &kp DE_N6  &kp DE_N7                   &kp DE_N8            &kp DE_N9            &kp DE_N0        &kp DE_GRAVE
-&kp TAB    &kp DE_Q                &kp DE_W                &kp DE_E               &kp DE_R                   &longPress LG(T) DE_T                              &kp DE_Z   &kp DE_U                    &kp DE_I             &kp DE_O             &kp DE_P         &kp DE_MINUS
-&kp LCTRL  &HML LEFT_CONTROL DE_A  &HML LEFT_ALT LS(DE_S)  &HML LGUI DE_D         &HMShiftL LEFT_SHIFT DE_F  &kp DE_G                                           &kp DE_H   &HMShiftR RIGHT_SHIFT DE_J  &HMR RIGHT_GUI DE_K  &HMR RIGHT_ALT DE_L  &kp DE_O_UMLAUT  &underscoreDBTap
-&kp LSHFT  &kp DE_Y                &kp DE_X                &longPress LG(C) DE_C  &longPress LG(V) DE_V      &kp DE_B               &kp DE_LBKT    &kp DE_RBKT  &kp DE_N   &kp DE_M                    &kp DE_COMMA         &kp DE_DOT           &kp DE_FSLH      &kp RSHFT
-                                                           &kp LALT               &kp LGUI                   &mo 1                  &kp SPACE      &kp RET      &mo 2      &kp BSPC                    &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R   &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F   &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V   &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LALT  &kp B   &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -112,12 +44,13 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
+            display-name = "Low";
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3   &bt BT_SEL 4                    &trans        &trans        &trans        &trans       &trans       &trans
-&kp F1        &kp F2            &kp F3             &kp F4             &kp F5         &kp F6                          &kp F7        &kp F8        &kp F9        &kp F10      &kp F11      &kp F12
-&kp DE_GRAVE  &kp DE_EXCL       &kp DE_AT          &kp DE_HASH        &kp DE_DOLLAR  &kp DE_PRCNT                    &kp DE_CARET  &kp DE_AMPS   &kp DE_ASTRK  &kp DE_LPAR  &kp DE_RPAR  &kp DE_TILDE
-&trans        &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans         &trans        &trans    &trans  &trans        &kp DE_MINUS  &kp DE_PLUS   &kp DE_LBRC  &kp DE_RBRC  &kp DE_PIPE
-                                                   &trans             &trans         &trans        &trans    &trans  &trans        &trans        &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
+&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
+                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -131,15 +64,20 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
+            display-name = "Rai";
             bindings = <
-&trans        &trans     &trans     &trans     &trans     &trans                       &trans       &trans        &trans        &trans       &trans       &trans
-&kp DE_GRAVE  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5                    &kp DE_N6    &kp DE_N7     &kp DE_N8     &kp DE_N9    &kp DE_N0    &trans
-&kp F1        &kp F2     &kp F3     &kp F4     &kp F5     &kp F6                       &trans       &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT    &trans
-&kp F7        &kp F8     &kp F9     &kp F10    &kp F11    &kp F12    &trans    &trans  &kp DE_PLUS  &kp DE_MINUS  &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH
-                                    &trans     &trans     &trans     &trans    &trans  &trans       &trans        &trans
+&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+
+        extra_1 { status = "reserved"; };
+
+        extra_2 { status = "reserved"; };
     };
 };
