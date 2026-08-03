@@ -1,7 +1,7 @@
 include:
-  - board: nice_nano_v2
+  - board: nrf52840
     shield: lily58_left
-  - board: nice_nano_v2
+  - board: nrf52840
     shield: lily58_right
-  - board: nice_nano_v2
+  - board: nrf52840
     shield: settings_reset
