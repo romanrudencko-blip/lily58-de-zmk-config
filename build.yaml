@@ -1,11 +1,11 @@
  # Lili58 Firmeare
   - keyboard: Lily58
     board: nice_nano_v2
-    shield: lily58_left nice_view_adapter nice_view
+    shield: lily58_left
     artifact-name: zmk-lily58-left
   - keyboard: Lily58
     board: nice_nano_v2
-    shield: lily58_right nice_view_adapter nice_view
+    shield: lily58_right
     artifact-name: zmk-lily58-right
   - keyboard: Lily58
     board: nice_nano_v2
