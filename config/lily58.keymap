@@ -13,6 +13,10 @@
 
 /*#include "keys_de.h"*/
 
+&right_encoder {
+    status = "okay";
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
