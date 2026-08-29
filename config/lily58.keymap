@@ -33,7 +33,7 @@
                                   &kp LEFT_ALT  &kp LEFT_WIN  &mo 1   &kp SPACE    &kp RET  &mo 2   &kp BSPC  &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         lower_layer {
